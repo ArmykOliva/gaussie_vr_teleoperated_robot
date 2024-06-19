@@ -9,6 +9,7 @@ export class InputSender extends Component {
     static Properties = {
         serverURL: Property.string('http://192.168.0.3:8000', 'Server URL'),
         camRoot: { type: Type.Object },
+        rightHand: { type: Type.Object },
         /** How far the thumbstick needs to be pushed to have the teleport target indicator show up */
         thumbstickActivationThreshhold: { type: Type.Float, default: -0.7 },
         /** How far the thumbstick needs to be released to execute the teleport */
@@ -45,6 +46,8 @@ export class InputSender extends Component {
             if (!data[input.handedness]) data[input.handedness] = {}; // Initialize the handedness object if it doesn't exist
             data[input.handedness]["x"] = input.gamepad.axes[2];
             data[input.handedness]["y"] = input.gamepad.axes[3];
+            data[input.handedness]["trigger"] = input.gamepad.buttons[0].value;
+            console.log(input.gamepad);
         }
         if (this.socket.connected) {
             this.socket.emit('controller_data', JSON.stringify(data));
