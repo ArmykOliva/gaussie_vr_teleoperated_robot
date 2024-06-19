@@ -1,0 +1,10 @@
+import * as __wonderlandengine_components from '@wonderlandengine/components';
+_registerEditor(__wonderlandengine_components);
+import * as _C__Users_kryst_Prace_JetsonCamera_js_ImgTexture_js from 'C:/Users/kryst/Prace/JetsonCamera/js/ImgTexture.js';
+_registerEditor(_C__Users_kryst_Prace_JetsonCamera_js_ImgTexture_js);
+import * as _C__Users_kryst_Prace_JetsonCamera_js_InputSender_js from 'C:/Users/kryst/Prace/JetsonCamera/js/InputSender.js';
+_registerEditor(_C__Users_kryst_Prace_JetsonCamera_js_InputSender_js);
+import * as _C__Users_kryst_Prace_JetsonCamera_js_VideoTexture_js from 'C:/Users/kryst/Prace/JetsonCamera/js/VideoTexture.js';
+_registerEditor(_C__Users_kryst_Prace_JetsonCamera_js_VideoTexture_js);
+import * as _C__Users_kryst_Prace_JetsonCamera_js_button_js from 'C:/Users/kryst/Prace/JetsonCamera/js/button.js';
+_registerEditor(_C__Users_kryst_Prace_JetsonCamera_js_button_js);
