@@ -21678,6 +21678,10 @@ var InputSender = class extends Component {
       data[input.handedness]["trigger"] = input.gamepad.buttons[0].value;
       console.log(input.gamepad);
     }
+    let camPos = camRoot.getPositionWorld(vec3.create());
+    let handPos = rightHand.getPositionWorld(vec3.create());
+    data["camPos"] = camPos;
+    data["handPos"] = handPos;
     if (this.socket.connected) {
       this.socket.emit("controller_data", JSON.stringify(data));
     }
