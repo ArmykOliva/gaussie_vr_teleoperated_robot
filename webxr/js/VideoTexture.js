@@ -6,7 +6,7 @@ import { Component, Property } from '@wonderlandengine/api';
 export class VideoTexture extends Component {
     static TypeName = 'VideoTexture';
     static Properties = {
-        streamUrl: Property.string('http://10.0.0.69:8000', 'Stream URL')
+        streamUrl: Property.string('http://192.168.0.3:8001', 'Stream URL')
     };
 
     start() {
@@ -33,7 +33,7 @@ export class VideoTexture extends Component {
                     this.material = mesh.material.clone();
                     mesh.material = this.material;
                 }
-                this.material.diffuseTexture = this.texture;
+                this.material.flatTexture = this.texture;
             }
         };
 

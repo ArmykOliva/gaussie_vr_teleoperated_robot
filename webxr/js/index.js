@@ -14,11 +14,12 @@
 /* wle:auto-imports:start */
 import {Cursor} from '@wonderlandengine/components';
 import {CursorTarget} from '@wonderlandengine/components';
+import {FingerCursor} from '@wonderlandengine/components';
+import {HandTracking} from '@wonderlandengine/components';
 import {HowlerAudioListener} from '@wonderlandengine/components';
 import {MouseLookComponent} from '@wonderlandengine/components';
 import {PlayerHeight} from '@wonderlandengine/components';
 import {VrModeActiveSwitch} from '@wonderlandengine/components';
-import {ImgTexture} from './ImgTexture.js';
 import {InputSender} from './InputSender.js';
 import {VideoTexture as VideoTexture1} from './VideoTexture.js';
 import {ButtonComponent} from './button.js';
@@ -28,7 +29,7 @@ import {loadRuntime} from '@wonderlandengine/api';
 
 /* wle:auto-constants:start */
 const Constants = {
-    ProjectName: 'JetsonCamera',
+    ProjectName: 'WebXR',
     RuntimeBaseName: 'WonderlandRuntime',
     WebXRRequiredFeatures: ['local',],
     WebXROptionalFeatures: ['local','local-floor','hand-tracking','hit-test',],
@@ -83,11 +84,12 @@ if (document.readyState === 'loading') {
 /* wle:auto-register:start */
 engine.registerComponent(Cursor);
 engine.registerComponent(CursorTarget);
+engine.registerComponent(FingerCursor);
+engine.registerComponent(HandTracking);
 engine.registerComponent(HowlerAudioListener);
 engine.registerComponent(MouseLookComponent);
 engine.registerComponent(PlayerHeight);
 engine.registerComponent(VrModeActiveSwitch);
-engine.registerComponent(ImgTexture);
 engine.registerComponent(InputSender);
 engine.registerComponent(VideoTexture1);
 engine.registerComponent(ButtonComponent);
